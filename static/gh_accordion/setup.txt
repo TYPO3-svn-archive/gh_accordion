@@ -1,0 +1,73 @@
+page {
+  javascriptLibs {
+    Prototype = 1
+    Scriptaculous = 1
+  }
+  includeJS.gh_accordion = EXT:gh_accordion/res/js/gh_accordion_functions.js
+}
+
+plugin.tx_ghaccordion {
+	single {
+		10.stdWrap {
+			outerWrap = <div id="tx_ghaccordion_header_{field:uid}" class="tx_ghaccordion_status{field:tx_ghaccordion_open}" onclick="txghaccordionsingletoggle({field:uid}); return false;">|</div>
+			outerWrap {
+				insertData = 1
+				if.isTrue.field = tx_ghaccordion_isaccordion
+			}
+		}
+
+		11 = TEXT
+		11 {
+			value = <div id="tx_ghaccordion_content_{field:uid}"><div>
+			insertData = 1
+			if.isTrue.field = tx_ghaccordion_isaccordion
+		}
+
+		998 = TEXT
+		998 {
+			value = </div></div>
+		}
+
+		999 = TEXT
+		999 {
+			noTrimWrap = |<script type="text/javascript"> /*<![CDATA[*/ | /*]]>*/ </script>|
+			value = document.getElementById("tx_ghaccordion_content_{field:uid}").style.display = "none";
+			insertData = 1
+			if.isFalse.field = tx_ghaccordion_open
+			if.isTrue.field = tx_ghaccordion_isaccordion
+		}
+	}
+
+	singleRenderObj {
+		header < plugin.tx_ghaccordion.single
+		text < plugin.tx_ghaccordion.single
+		image < plugin.tx_ghaccordion.single
+		textpic < plugin.tx_ghaccordion.single
+		bullet < plugin.tx_ghaccordion.single
+		table < plugin.tx_ghaccordion.single
+		uploads < plugin.tx_ghaccordion.single
+		multimedia < plugin.tx_ghaccordion.single
+		mailform < plugin.tx_ghaccordion.single
+		search < plugin.tx_ghaccordion.single
+		login < plugin.tx_ghaccordion.single
+		menu < plugin.tx_ghaccordion.single
+		list < plugin.tx_ghaccordion.single
+	}
+
+	_CSS_DEFAULT_STYLE (
+		.tx_ghaccordion_status0 {
+			cursor: pointer;
+			background-image: url(/typo3conf/ext/gh_accordion/res/img/plus.gif);
+			background-repeat: no-repeat;
+			background-position: left center;
+			padding-left: 16px;
+		}
+		.tx_ghaccordion_status1 {
+			cursor: pointer;
+			background-image: url(/typo3conf/ext/gh_accordion/res/img/minus.gif);
+			background-repeat: no-repeat;
+			background-position: left center;
+			padding-left: 16px;
+		}
+	)
+}
