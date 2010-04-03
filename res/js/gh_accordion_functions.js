@@ -1,5 +1,9 @@
-var txghaccordioneffect = 'blind';
-var txghaccordionoptions = { duration: 0.3 };
+if( typeof txghaccordioneffect == 'undefined') {
+	txghaccordioneffect = 'blind';
+}
+if( typeof txghaccordionoptions == 'undefined') {
+	txghaccordionoptions = { duration: 0.5 };
+}
 
 function txghaccordionsingletoggle(uid) {
 	Effect.toggle('tx_ghaccordion_content_' + uid, txghaccordioneffect, txghaccordionoptions );

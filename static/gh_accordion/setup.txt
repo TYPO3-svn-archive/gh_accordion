@@ -34,7 +34,7 @@ plugin.tx_ghaccordion {
 		999 = TEXT
 		999 {
 			noTrimWrap = |<script type="text/javascript"> /*<![CDATA[*/ | /*]]>*/ </script>|
-			value = document.getElementById("tx_ghaccordion_content_{field:uid}").style.display = "none";
+			value = $('tx_ghaccordion_content_{field:uid}').style.display = 'none';
 			insertData = 1
 			if.isFalse.field = tx_ghaccordion_open
 			if.isTrue.field = tx_ghaccordion_isaccordion
