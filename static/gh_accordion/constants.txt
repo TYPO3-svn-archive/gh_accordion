@@ -1,0 +1,7 @@
+plugin.tx_ghaccordion {
+	# cat=plugin.tx_ghaccordion//a; type=options[blind,slide,appear]; label=effect: Type of effect for the accordion
+	effect = blind
+
+	# cat=plugin.tx_ghaccordion//b; type=string; label=options: Additional options for the accordion
+	options = duration: 0.5
+}

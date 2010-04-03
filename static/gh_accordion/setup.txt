@@ -3,7 +3,10 @@ page {
     Prototype = 1
     Scriptaculous = 1
   }
-  includeJS.gh_accordion = EXT:gh_accordion/res/js/gh_accordion_functions.js
+  includeJS.tx_ghaccordion = EXT:gh_accordion/res/js/gh_accordion_functions.js
+	jsInline.77 = TEXT
+	jsInline.77.value = var txghaccordioneffect = '{$plugin.tx_ghaccordion.effect}'; var txghaccordionoptions = { {$plugin.tx_ghaccordion.options} };
+
 }
 
 plugin.tx_ghaccordion {
