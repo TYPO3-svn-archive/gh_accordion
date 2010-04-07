@@ -29,6 +29,7 @@ plugin.tx_ghaccordion {
 		998 = TEXT
 		998 {
 			value = </div></div>
+			if.isTrue.field = tx_ghaccordion_isaccordion
 		}
 
 		999 = TEXT

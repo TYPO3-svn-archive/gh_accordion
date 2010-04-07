@@ -1,3 +1,7 @@
+2010-04-07 Gregor Hermens <gregor@a-mazing.de>
+
+	* Fixed rendering bug
+
 2010-04-03 Gregor Hermens <gregor@a-mazing.de>
 
 	* Effect is now configurable via Constant Editor
